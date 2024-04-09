@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "c3642837-9280-4cde-8f66-7a14bbfd1f5a",
+		"name": "YII2 RBAC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20695264"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin54848\",\n    \"email\": \"test54884@gmail.com\",\n    \"password\": \"admin1234\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/user/register",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/user/login",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "iAbTbXvAwnEkqjjlvQmInjgjirm1VC2o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/user/me",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"user",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer jPhKPm6iF6skliaAEjr4KqPtzeTsxcvb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Post Title\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer jPhKPm6iF6skliaAEjr4KqPtzeTsxcvb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Post Title\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post/1",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts By Date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer jPhKPm6iF6skliaAEjr4KqPtzeTsxcvb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Post Title\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post?start_date=1712476841&end_date=1712476848",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "1712476841"
+						},
+						{
+							"key": "end_date",
+							"value": "1712476848"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts By Title",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer jPhKPm6iF6skliaAEjr4KqPtzeTsxcvb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Post Title\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post?title=44",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "44"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts By Author ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer jPhKPm6iF6skliaAEjr4KqPtzeTsxcvb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Post Title\",\n    \"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post?author_id=2",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post"
+					],
+					"query": [
+						{
+							"key": "author_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "-MCIAX29_c8XskUHctHB-fhlAUWCKplj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Post Title 4444\",\n    \"content\": \"Lorem 444\",\n    \"author_id\": 1\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post/create",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "-MCIAX29_c8XskUHctHB-fhlAUWCKplj",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {your_access_token}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Updated Title2228888\",\n    \"content\": \"Updated Content222\"\n}"
+				},
+				"url": {
+					"raw": "http://yii2-rbac.local/web/api/post/1",
+					"protocol": "http",
+					"host": [
+						"yii2-rbac",
+						"local"
+					],
+					"path": [
+						"web",
+						"api",
+						"post",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

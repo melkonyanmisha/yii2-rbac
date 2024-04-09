@@ -1,0 +1,16 @@
+.layout {
+  .links {
+    width: fit-content;
+
+    display: flex;
+    gap: 10px;
+
+    list-style: none;
+
+    .link {
+      cursor: pointer;
+
+      position: relative;
+    }
+  }
+}

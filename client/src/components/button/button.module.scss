@@ -1,0 +1,27 @@
+.layout {
+  display: flex;
+  align-items: center;
+
+  .button {
+    width: 80px;
+    height: 30px;
+
+    color: white;
+    background: rgb(73, 138, 207);
+
+    border: none;
+    outline: none;
+
+    border-radius: 4px;
+
+    font-weight: bold;
+
+    &:hover {
+      background: rgba(73, 138, 207, .8);
+    }
+
+    &:active {
+      background: rgb(73, 138, 207);
+    }
+  }
+}

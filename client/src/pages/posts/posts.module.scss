@@ -1,0 +1,44 @@
+.layout {
+  width: 100%;
+  max-width: 1228px;
+
+  margin: 0 auto;
+
+  .table {
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+
+    td, th {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+
+      > div {
+        justify-content: center;
+      }
+    }
+
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    tr:hover {
+      background: #ddd;
+    }
+
+    tr.filters:hover {
+      background: white;
+    }
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      color: white;
+      background: rgb(73, 138, 207);
+
+      text-align: center;
+    }
+  }
+}

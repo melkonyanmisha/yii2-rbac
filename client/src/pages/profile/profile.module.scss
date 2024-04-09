@@ -1,0 +1,13 @@
+.layout {
+  width: 400px;
+
+  margin: 50px auto;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+}
